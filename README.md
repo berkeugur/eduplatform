@@ -1,210 +1,187 @@
-# İngilizce Öğrenim & Canlı Ders Platformu
+# Online İngilizce Öğrenim & Canlı Ders Platformu
 
-**Teknik Altyapı – Özellikler – Maliyet Raporu**
+**Cloudflare RealtimeKit Tabanlı Teknik ve Ürün Tanımı**
 
-## 1. Proje Özeti
+## Proje Tanımı
 
-Bu proje, bireysel veya grup halinde **canlı İngilizce dersleri**, **özel dersler**, **konuşma pratikleri** ve **etkileşimli sınıf deneyimi** sunan, tamamen markaya özel bir **online eğitim platformu** geliştirilmesini kapsar.
+Bu proje, bireysel ve grup bazlı canlı İngilizce derslerinin verilebildiği, öğretmenler ve öğrenciler için profesyonel bir sınıf deneyimi sunan, tamamen markaya özel bir **online eğitim platformunun** geliştirilmesini kapsamaktadır.
 
-Platform:
-
-* **Web tabanlı** olacak
-* **Next.js** ile geliştirilecek
-* **Agora** gerçek zamanlı video & ses altyapısı kullanılacak
-* Ölçeklenebilir, güvenli ve gelir üretmeye uygun olacak
+Platform web tabanlı olacak, modern bir kullanıcı arayüzüne sahip olacak ve canlı ders altyapısı **Cloudflare RealtimeKit** kullanılarak sağlanacaktır. Bu sayede sistem hem global ölçekte stabil çalışacak hem de uzun vadede maliyet açısından sürdürülebilir olacaktır.
 
 ---
 
-## 2. Hedef Kullanıcılar
+## Platformun Amacı
 
-* Öğrenciler (bireysel / grup)
-* Öğretmenler
-* Admin & operasyon ekibi
-* (Opsiyonel) Kurumsal müşteriler
+Platformun temel amacı, kullanıcıların kesintisiz ve kaliteli bir canlı ders deneyimi yaşamasını sağlarken, işletme tarafında ölçeklenebilir ve kontrol edilebilir bir yapı oluşturmaktır.
 
----
-
-## 3. Temel Özellikler
-
-### 3.1 Canlı Ders Altyapısı (Agora)
-
-Agora Education Solutions kullanılarak:
-
-* Canlı **video & sesli dersler**
-* **1-on-1 özel ders**
-* **15–20 kişilik grup dersleri**
-* **Ekran paylaşımı**
-* **Canlı chat**
-* **Ders kaydı & tekrar izleme**
-* **Breakout rooms** (konuşma pratiği)
-* **El kaldırma**
-* **Rol bazlı yetkiler** (öğretmen / öğrenci)
-
-Agora’nın global altyapısı sayesinde:
-
-* Düşük gecikme
-* Yüksek ses & görüntü kalitesi
-* Dünya genelinde stabil bağlantı
+Cloudflare’ın edge-first mimarisi sayesinde canlı dersler düşük gecikme ile gerçekleşir, farklı coğrafyalardan katılan kullanıcılar için bağlantı kalitesi korunur ve sistem büyüdükçe altyapı darboğazları yaşanmaz.
 
 ---
 
-### 3.2 Sınıf ve Ders Yönetimi
+## Canlı Ders Altyapısı (Cloudflare RealtimeKit)
 
-* Ders oluşturma
-* Ders takvimi
-* Öğrenci atama
-* Katılım listesi
-* Canlı ders içi kontrol paneli
-* Öğretmen kontrol yetkileri
+Canlı dersler **Cloudflare RealtimeKit** altyapısı ile sağlanacaktır. Bu yapı, WebRTC tabanlı gerçek zamanlı video ve ses iletişimini Cloudflare’ın global ağı üzerinden sunar.
+
+Platformda aşağıdaki canlı ders senaryoları desteklenecektir:
+
+* Bire bir (1-on-1) özel dersler
+* 15–20 kişilik grup dersleri
+* Öğretmen merkezli canlı sınıflar
+* Konuşma pratiği için küçük gruplar
+
+Canlı ders sırasında:
+
+* Video ve sesli iletişim
+* Ekran paylaşımı
+* Gerçek zamanlı sohbet
+* El kaldırma ve moderasyon
+* Rol bazlı yetkilendirme (öğretmen / öğrenci)
+* Ders kaydı ve tekrar izleme
+
+özellikleri kullanılabilecektir.
 
 ---
 
-### 3.3 Etkileşim & Öğrenme Araçları
+## Ders ve Sınıf Yönetimi
 
-* **Interactive Whiteboard**
-* Yazı / çizim / annotation
+Platform üzerinden öğretmenler ve admin kullanıcılar dersleri kolayca yönetebilir.
+
+Bu kapsamda:
+
+* Ders ve sınıf oluşturma
+* Ders takvimi ve saat planlama
+* Öğrenci atama ve katılım takibi
+* Canlı ders sırasında öğretmen kontrol araçları
+* Ders geçmişi ve kayıt arşivi
+
+gibi temel yönetim fonksiyonları sunulacaktır.
+
+---
+
+## Etkileşimli Öğrenme Deneyimi
+
+Canlı derslerin verimliliğini artırmak için etkileşimli araçlar desteklenecektir.
+
+Bunlar arasında:
+
+* Dijital yazı tahtası
+* Çizim ve annotation
 * Ders materyali paylaşımı
-* PDF, görsel, video destekleri
-* (Opsiyonel) Quiz & mini testler
+* PDF, görsel ve video destekleri
+
+yer alacaktır. Bu yapı, yüz yüze sınıf deneyimine yakın bir öğrenme ortamı oluşturmayı hedefler.
 
 ---
 
-### 3.4 Kullanıcı Yönetimi
+## Kullanıcı Yönetimi
 
-* Kayıt / giriş
-* Öğrenci profili
-* Öğretmen profili
+Platformda farklı kullanıcı rolleri bulunacaktır:
+
+* Öğrenciler
+* Öğretmenler
+* Admin kullanıcılar
+
+Kullanıcılar için:
+
+* Kayıt ve giriş
+* Profil bilgileri
 * Ders geçmişi
-* Katılım & ilerleme takibi
+* Katılım ve ilerleme takibi
+
+gibi temel özellikler sağlanacaktır.
 
 ---
 
-### 3.5 Ödeme & Gelir Modeli (Opsiyonel)
+## Ödeme ve Gelir Modeli
 
-* Paket satın alma
-* Aylık üyelik
+Platform, farklı gelir modellerine uygun şekilde tasarlanacaktır.
+
+Desteklenen modeller:
+
+* Aylık abonelik
+* Ders paketleri
 * Özel ders kredileri
 * Ders başı ödeme
 * Öğretmen gelir paylaşımı
 
-> Ödeme altyapısı olarak **Iyzico / Stripe** entegre edilebilir.
+Ödeme altyapısı olarak Türkiye için **Iyzico**, global kullanım için **Stripe** entegre edilebilir.
 
 ---
 
-## 4. Teknik Mimari
+## Teknik Yapı
 
-### 4.1 Frontend
+Platformun teknik mimarisi modern ve ölçeklenebilir bir yapı üzerine kurulacaktır.
 
-* **Next.js (React)**
-* SSR / SEO uyumlu
-* Modern UI (Tailwind / Shadcn)
-* Responsive (Desktop / Tablet / Mobile)
+### Frontend
 
----
+* Next.js (React)
+* Responsive ve modern arayüz
+* SEO uyumlu yapı
 
-### 4.2 Backend
+### Backend
 
-* **Node.js (NestJS)** veya benzeri
-* REST / WebSocket
-* JWT authentication
+* Node.js (NestJS veya benzeri)
+* REST API ve WebSocket
+* JWT tabanlı kimlik doğrulama
 * Rol bazlı yetkilendirme
 
----
+### Gerçek Zamanlı Altyapı
 
-### 4.3 Gerçek Zamanlı İletişim
+* Cloudflare RealtimeKit
+* WebRTC tabanlı video ve ses
+* Cloudflare edge ağı üzerinden düşük gecikme
+* Ders kayıtları için Cloudflare Stream / R2
 
-* **Agora SDK**
-* Video
-* Audio
-* Messaging
-* Recording
-* Analytics
-
----
-
-### 4.4 Veritabanı
+### Veri Katmanı
 
 * PostgreSQL veya MongoDB
-* Kullanıcılar
-* Dersler
-* Paketler
-* Ödeme kayıtları
+* Kullanıcı, ders, paket ve ödeme verileri
 
 ---
 
-## 5. Agora Altyapısının Avantajları
+## Geliştirme Süreci
 
-* Eğitim odaklı SDK
-* 1-on-1’den **binlerce kullanıcıya kadar ölçek**
-* Düşük latency
-* Global CDN
-* Güvenli veri akışı
-* Canlı kalite & kullanım analitikleri
+Proje aşamaları aşağıdaki şekilde planlanmaktadır:
 
-Preply, HelloTalk gibi büyük EdTech markaları tarafından aktif kullanılmaktadır.
+* Analiz ve kullanıcı deneyimi çalışmaları
+* Arayüz ve frontend geliştirme
+* Backend geliştirme
+* Cloudflare RealtimeKit entegrasyonu
+* Test, optimizasyon ve canlıya alma
 
----
-
-## 6. Tahmini Geliştirme Süreci
-
-| Aşama              | Süre           |
-| ------------------ | -------------- |
-| Analiz & UX        | 1–2 hafta      |
-| UI / Frontend      | 3–4 hafta      |
-| Backend            | 3–4 hafta      |
-| Agora entegrasyonu | 1–2 hafta      |
-| Test & Yayın       | 1 hafta        |
-| **Toplam**         | **9–12 hafta** |
+Toplam geliştirme süresi yaklaşık **9–12 hafta** olarak öngörülmektedir.
 
 ---
 
-## 7. Maliyet Tahmini
+## Maliyet Yapısı
 
-### 7.1 Geliştirme Maliyeti (Tek Seferlik)
+### Geliştirme Maliyeti (Tek Seferlik)
 
-| Kalem               | Tahmini                 |
-| ------------------- | ----------------------- |
-| Frontend            | 4.000 – 6.000 USD       |
-| Backend             | 4.000 – 6.000 USD       |
-| Agora entegrasyonu  | 2.000 – 3.000 USD       |
-| Test & optimizasyon | 1.000 – 2.000 USD       |
-| **Toplam**          | **11.000 – 17.000 USD** |
+Toplam geliştirme maliyetinin **7.500 – 12.000 USD** aralığında olması beklenmektedir. Bu maliyet; frontend, backend, canlı ders entegrasyonu, test ve optimizasyon süreçlerini kapsamaktadır.
 
 ---
 
-### 7.2 Aylık Operasyonel Giderler
+### Aylık Operasyonel Giderler
 
-| Kalem              | Tahmini                            |
-| ------------------ | ---------------------------------- |
-| Agora (video/ses)  | 200 – 1.000 USD *(kullanıma göre)* |
-| Sunucu (VPS/Cloud) | 50 – 150 USD                       |
-| Storage & kayıtlar | 50 – 200 USD                       |
-| **Toplam**         | **300 – 1.300 USD / ay**           |
+Aylık giderler kullanım miktarına bağlı olarak değişmekle birlikte yaklaşık olarak:
 
-> Agora fiyatları **dakika bazlıdır**, kullanıcı sayısı arttıkça maliyet lineer artar.
+* Cloudflare RealtimeKit & canlı iletişim: 150 – 700 USD
+* Sunucu ve backend maliyetleri: 50 – 150 USD
+* Kayıt ve medya depolama: 50 – 200 USD
+
+Toplamda **250 – 1.000 USD / ay** aralığında öngörülmektedir.
 
 ---
 
-## 8. Ölçeklenebilirlik & Gelecek Genişletmeler
+## Ölçeklenebilirlik ve Gelecek Planları
 
-* Mobil uygulama (iOS / Android)
-* AI destekli konuşma analizi
-* Otomatik seviye tespiti
+Bu altyapı ilerleyen aşamalarda:
+
+* Mobil uygulamalar (iOS / Android)
+* AI destekli konuşma ve telaffuz analizi
+* Otomatik seviye belirleme
 * Sertifika sistemi
-* LMS entegrasyonu
-* Kurumsal paketler
+* Kurumsal eğitim paketleri
 
----
-
-## 9. Sonuç
-
-Bu yapı ile:
-
-* Profesyonel, ölçeklenebilir
-* Gelir üretmeye hazır
-* Global kullanıma uygun
-* Markaya özel
-* Uzun vadede büyüyebilen
-
-bir **online İngilizce öğrenim platformu** inşa edilebilir.
+gibi ek özellikler için uygundur.
 
